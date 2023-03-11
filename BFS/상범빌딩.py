@@ -19,10 +19,10 @@ class Solution:
                     if building[i][j][k] == 'E':
                         end = (i, j, k)
 
-        visited = [[[0] * c for _ in range(r)] for _ in range(l)]
+        visited: list[list[list[int]]] = [[[0] * c for _ in range(r)] for _ in range(l)]
         visited[start[0]][start[1]][start[2]] = 1
-        q = deque()
-        q.append((start,0))
+        q: deque[tuple[tuple[int,int,int], int]] = deque()
+        q.append((start, 0))
 
         while q:
 
