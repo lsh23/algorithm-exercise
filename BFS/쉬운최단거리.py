@@ -15,7 +15,6 @@ class Solution:
 
         q: deque[tuple[int, int, int]] = deque()
         dist: list[list[int]] = [[0] * m for _ in range(n)]
-
         q.append((start[0], start[1], 0))
         while q:
             y, x, d = q.popleft()
